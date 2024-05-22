@@ -44,3 +44,6 @@ This project demonstrates the potential of using sound recognition to overcome t
 
 Future enhancements may include integrating video recognition to create a multi-modal detection system, further improving the accuracy and robustness of traffic incident monitoring.
 
+
+[![Teamwork](https://img.shields.io/badge/teamwork-green.svg)](https://example.com)
+
