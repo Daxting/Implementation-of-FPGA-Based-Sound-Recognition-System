@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAV文件播放器</title>
+</head>
+<body>
+    <input type="file" id="audioFilesInput" multiple accept=".wav">
+    <audio id="audio" controls></audio>
+    <p id="status">Status: Ready</p>
+    <p id="direction" style="color: red;">press "s" to play the audio, press "k" to mark timestamps, and press "q" to download timestamps</p>
+
+    <script>
+        const audioFilesInput = document.querySelector('#audioFilesInput');
+        const audio = document.querySelector('#audio');
+        const status = document.querySelector('#status');
+        let keyPressTimes = [];
+        let audioFileNames = [];
+        let currentFileIndex = 0;
+        let audioFiles = [];
+        let isPlaying = false;
+        let startTime = 0;
+
+        function handleAudioFilesSelection(e) {
+            if (e.target.files !== null) {
+                audioFiles = Array.from(e.target.files).map(file => URL.createObjectURL(file));
+                audioFileNames = Array.from(e.target.files).map(file => file.name);
+            }
+        }
+
+        audioFilesInput.addEventListener('change', handleAudioFilesSelection);
+
+        function playNextAudio() {
+            if (currentFileIndex >= audioFiles.length) {
+                status.textContent = 'Status: All audio files played';
+                return;
+            }
+
+            const filename = audioFiles[currentFileIndex];
+            audio.src = filename;
+            audio.play();
+            status.textContent = `Status: Playing - ${audioFileNames[currentFileIndex]}`;
+            isPlaying = true;
+        }
+
+        audio.addEventListener('timeupdate', function(e) {
+            status.textContent = `Status: Playing ${audioFileNames[currentFileIndex]} - ${audio.currentTime.toFixed(2)} / ${audio.duration.toFixed(2)} seconds`;
+        });
+
+        audio.addEventListener('ended', function() {
+            isPlaying = false;
+            currentFileIndex++;
+            startTime = 0; // Reset start time for the next audio file
+            playNextAudio();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 's' && !isPlaying && audioFiles.length > 0) {
+                playNextAudio();
+            } else if (e.key === 'k' && isPlaying) {
+                if (!startTime) {
+                    startTime = audio.currentTime;
+                } else {
+                    keyPressTimes.push([audioFileNames[currentFileIndex], startTime.toFixed(2), audio.currentTime.toFixed(2)]);
+                    startTime = audio.currentTime;
+                }
+            } else if (e.key === 'q') {
+                downloadLog();
+            }
+        });
+
+        function downloadLog() {
+            let content = '';
+            keyPressTimes.forEach(([filename, startTime, endTime]) => {
+                content += `${filename} - ${startTime}/${endTime}\n`;
+            });
+
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `audio_log.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
