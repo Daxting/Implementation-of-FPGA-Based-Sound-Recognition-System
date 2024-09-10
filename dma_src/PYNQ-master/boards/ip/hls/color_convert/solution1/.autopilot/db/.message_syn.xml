@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;color_convert/color_convert.cpp&apos; ..." resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 207-2164]" key="HLS 207-2164" tag="" content="&apos;bitwidth&apos; attribute requires integer constant between 1 and 4096 inclusive: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_common.h:512:29" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-4535]" key="HLS 207-4535" tag="" content="in instantiation of template class &apos;ssdm_int&lt;0, false&gt;&apos; requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:148:29" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-4535]" key="HLS 207-4535" tag="" content="in instantiation of template class &apos;ap_int_base&lt;0, false&gt;&apos; requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int.h:205:18" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-4535]" key="HLS 207-4535" tag="" content="in instantiation of template class &apos;ap_uint&lt;0&gt;&apos; requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:115:17" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-4535]" key="HLS 207-4535" tag="" content="in instantiation of template class &apos;ap_axiu&lt;24, 1, 0, 0&gt;&apos; requested here: color_convert/color_convert.cpp:23:8" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 207-2164]" key="HLS 207-2164" tag="" content="&apos;bitwidth&apos; attribute requires integer constant between 1 and 4096 inclusive: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int.h:232:75" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-4535]" key="HLS 207-4535" tag="" content="in instantiation of template class &apos;ap_uint&lt;0&gt;&apos; requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:115:17" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-4535]" key="HLS 207-4535" tag="" content="in instantiation of template class &apos;ap_axiu&lt;24, 1, 0, 0&gt;&apos; requested here: color_convert/color_convert.cpp:23:8" resolution=""/>
+</Messages>

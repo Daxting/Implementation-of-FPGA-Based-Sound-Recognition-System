@@ -1,0 +1,36 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Xilinx/Vitis/2020.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis/2020.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'timta' on host 'tims_laptop' (Windows NT_amd64 version 6.2) on Tue May 07 00:18:15 +0800 2024
+INFO: [HLS 200-10] In directory 'C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls'
+Sourcing Tcl script 'color_convert/script.tcl'
+INFO: [HLS 200-10] Opening project 'C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert'.
+INFO: [HLS 200-10] Adding design file 'color_convert/color_convert.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'color_convert/color_convert_test.cpp' to the project
+INFO: [HLS 200-10] Opening solution 'C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 7ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-1505.html
+INFO: [HLS 200-10] Analyzing design file 'color_convert/color_convert.cpp' ... 
+ERROR: [HLS 207-2164] 'bitwidth' attribute requires integer constant between 1 and 4096 inclusive: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_common.h:512:29
+INFO: [HLS 207-4535] in instantiation of template class 'ssdm_int<0, false>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:148:29
+INFO: [HLS 207-4535] in instantiation of template class 'ap_int_base<0, false>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int.h:205:18
+INFO: [HLS 207-4535] in instantiation of template class 'ap_uint<0>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:115:17
+INFO: [HLS 207-4535] in instantiation of template class 'ap_axiu<24, 1, 0, 0>' requested here: color_convert/color_convert.cpp:23:8
+ERROR: [HLS 207-2164] 'bitwidth' attribute requires integer constant between 1 and 4096 inclusive: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int.h:232:75
+INFO: [HLS 207-4535] in instantiation of template class 'ap_uint<0>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:115:17
+INFO: [HLS 207-4535] in instantiation of template class 'ap_axiu<24, 1, 0, 0>' requested here: color_convert/color_convert.cpp:23:8
+Compilation of the preprocessed source 'color_convert' failed
+    while executing
+"source color_convert/script.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $arg] "
+
+INFO: [Common 17-206] Exiting vitis_hls at Tue May  7 00:18:45 2024...

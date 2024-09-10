@@ -1,0 +1,1403 @@
+INFO-FLOW: Workspace D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1 opened at Mon May 06 23:56:47 +0800 2024
+Execute       send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -default_interface 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_config_rtl -register_reset_num 
+Command     open_solution done; 0.227 sec.
+Execute     set_part xc7z020clg400-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=C:/Xilinx/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=C:/Xilinx/Vivado/2020.1/data;C:/Xilinx/Vitis/2020.1/data
+Execute       ap_part_info -name xc7z020clg400-1 -data single -quiet 
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis/2020.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2020.1/data/parts/arch.xml
+Command       ap_part_info done; 1.041 sec.
+Execute       ap_part_info -name xc7z020clg400-1 -data info 
+Execute       ap_family_info -name zynq -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Command         import_lib done; 0.137 sec.
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.306 sec.
+Command         ap_source done; 0.315 sec.
+Execute         ap_part_info -data single -name xc7z020-clg400-1 
+Execute         ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute         config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -speed slow 
+Command       add_library done; 0.523 sec.
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 1.743 sec.
+Execute     create_clock -period 7 
+Execute       ap_set_clock -name default -period 7 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 7ns.
+Execute     csynth_design 
+Execute       get_config_compile -dump_cfg 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-10] Analyzing design file 'color_convert/color_convert.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling color_convert/color_convert.cpp as C++
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.cpp.diag.yml -fno-limit-debug-info --sysroot C:/Xilinx/Vitis/2020.1/tps/mingw/6.2.0/win64.o/nt -fhls -fno-exceptions -E color_convert/color_convert.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot/39 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.cpp.err.log 
+Command         ap_eval done; 2.718 sec.
+INFO-FLOW: Done: GCC PP 39 time: 2.7 seconds per iteration
+Execute         set_directive_top color_convert -name=color_convert 
+INFO-FLOW: Setting directive 'TOP' name=color_convert 
+INFO-FLOW: Setting directive 'TOP' name=color_convert 
+Execute         source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute           source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO-FLOW: Setting directive 'TOP' name=color_convert 
+Execute         list_core -type functional_unit 
+Execute         clang_tidy xilinx-systemc-detector D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  -directive=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/.systemc_flag -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 2.133 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  -directive=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/all.directive.json -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 1.731 sec.
+Execute         clang_tidy xilinx-constantarray-param,xilinx-remove-assert D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 1.471 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 3.2 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+Execute         clang_tidy -errorcheck xilinx-label-all-loops D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.628 sec.
+Execute           source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute             source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Command         clang_tidy done; 1.705 sec.
+Execute         clang_tidy -errorcheck xilinx-top-parameters D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-top-parameters -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.211 sec.
+Command         clang_tidy done; 1.248 sec.
+Execute         clang_tidy -errorcheck xilinx-array-stream-check D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-array-stream-check -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.31 sec.
+Command         clang_tidy done; 1.346 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/xilinx-dataflow-lawyer.color_convert.pp.0.cpp.diag.yml D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/xilinx-dataflow-lawyer.color_convert.pp.0.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/xilinx-dataflow-lawyer.color_convert.pp.0.cpp.err.log 
+Command         ap_eval done; 3.36 sec.
+Execute         clang_tidy -errorcheck xilinx-warn-mayneed-no-ctor-attribute D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-warn-mayneed-no-ctor-attribute -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.401 sec.
+Command         clang_tidy done; 1.438 sec.
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.pragma.2.cpp.diag.yml -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pragma.2.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.bc > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.pragma.2.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.pragma.2.cpp.err.log 
+Command         ap_eval done; error code: 1; 1.973 sec.
+ERROR: [HLS 207-2164] 'bitwidth' attribute requires integer constant between 1 and 4096 inclusive: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_common.h:512:29
+INFO: [HLS 207-4535] in instantiation of template class 'ssdm_int<0, false>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:148:29
+INFO: [HLS 207-4535] in instantiation of template class 'ap_int_base<0, false>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int.h:205:18
+INFO: [HLS 207-4535] in instantiation of template class 'ap_uint<0>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:115:17
+INFO: [HLS 207-4535] in instantiation of template class 'ap_axiu<24, 1, 0, 0>' requested here: color_convert/color_convert.cpp:23:8
+ERROR: [HLS 207-2164] 'bitwidth' attribute requires integer constant between 1 and 4096 inclusive: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int.h:232:75
+INFO: [HLS 207-4535] in instantiation of template class 'ap_uint<0>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:115:17
+INFO: [HLS 207-4535] in instantiation of template class 'ap_axiu<24, 1, 0, 0>' requested here: color_convert/color_convert.cpp:23:8
+Command       elaborate done; error code: 2; 19.662 sec.
+Command     csynth_design done; error code: 2; 19.668 sec.
+Command   ap_source done; error code: 1; 21.846 sec.
+Execute   cleanup_all 
+INFO-FLOW: Workspace D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1 opened at Tue May 07 00:00:36 +0800 2024
+Execute       ap_set_clock -name default -period 7 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 7ns.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.109 sec.
+Command       ap_source done; 0.11 sec.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       set_part xc7z020-clg400-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=C:/Xilinx/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=C:/Xilinx/Vivado/2020.1/data;C:/Xilinx/Vitis/2020.1/data
+Execute         ap_part_info -name xc7z020-clg400-1 -data single -quiet 
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis/2020.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2020.1/data/parts/arch.xml
+Command         ap_part_info done; 1.003 sec.
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         ap_family_info -name zynq -data info 
+Execute         add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute           get_default_platform 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command             ap_source done; 0.116 sec.
+Command           ap_source done; 0.116 sec.
+Execute           ap_part_info -data single -name xc7z020-clg400-1 
+Execute           ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute           config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute           ap_part_info -name xc7z020-clg400-1 -data info 
+Execute           config_chip_info -speed slow 
+Command         add_library done; 0.192 sec.
+Execute         add_library xilinx/zynq/zynq_fpv6 
+Execute           get_default_platform 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                   source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                   source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         get_default_platform 
+Command       set_part done; 1.322 sec.
+Execute       ap_part_info -data single -name xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute       config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_chip_info -speed slow 
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -default_interface 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_config_rtl -register_reset_num 
+Command     open_solution done; 1.582 sec.
+Execute     set_part xc7z020clg400-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=C:/Xilinx/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=C:/Xilinx/Vivado/2020.1/data;C:/Xilinx/Vitis/2020.1/data
+Execute       ap_part_info -name xc7z020clg400-1 -data single -quiet 
+Execute       ap_part_info -name xc7z020clg400-1 -data info 
+Execute       ap_family_info -name zynq -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.101 sec.
+Command         ap_source done; 0.101 sec.
+Execute         ap_part_info -data single -name xc7z020-clg400-1 
+Execute         ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute         config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -speed slow 
+Command       add_library done; 0.175 sec.
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.293 sec.
+Execute     create_clock -period 7 
+Execute     csynth_design 
+Execute       get_config_compile -dump_cfg 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-10] Analyzing design file 'color_convert/color_convert.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling color_convert/color_convert.cpp as C++
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.cpp.diag.yml -fno-limit-debug-info --sysroot C:/Xilinx/Vitis/2020.1/tps/mingw/6.2.0/win64.o/nt -fhls -fno-exceptions -E color_convert/color_convert.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot/39 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.cpp.err.log 
+Command         ap_eval done; 1.616 sec.
+INFO-FLOW: Done: GCC PP 39 time: 1.6 seconds per iteration
+Execute         set_directive_top color_convert -name=color_convert 
+INFO-FLOW: Setting directive 'TOP' name=color_convert 
+INFO-FLOW: Setting directive 'TOP' name=color_convert 
+Execute         source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute           source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO-FLOW: Setting directive 'TOP' name=color_convert 
+Execute         list_core -type functional_unit 
+Execute         clang_tidy xilinx-systemc-detector D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  -directive=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/.systemc_flag -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 1.422 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  -directive=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/all.directive.json -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 1.659 sec.
+Execute         clang_tidy xilinx-constantarray-param,xilinx-remove-assert D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 1.603 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 3.3 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+Execute         clang_tidy -errorcheck xilinx-label-all-loops D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.569 sec.
+Execute           source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute             source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Command         clang_tidy done; 1.617 sec.
+Execute         clang_tidy -errorcheck xilinx-top-parameters D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-top-parameters -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.195 sec.
+Command         clang_tidy done; 1.227 sec.
+Execute         clang_tidy -errorcheck xilinx-array-stream-check D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-array-stream-check -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.333 sec.
+Command         clang_tidy done; 1.367 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/xilinx-dataflow-lawyer.color_convert.pp.0.cpp.diag.yml D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/xilinx-dataflow-lawyer.color_convert.pp.0.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/xilinx-dataflow-lawyer.color_convert.pp.0.cpp.err.log 
+Command         ap_eval done; 1.225 sec.
+Execute         clang_tidy -errorcheck xilinx-warn-mayneed-no-ctor-attribute D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-warn-mayneed-no-ctor-attribute -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.304 sec.
+Command         clang_tidy done; 1.343 sec.
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.pragma.2.cpp.diag.yml -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pragma.2.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.bc > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.pragma.2.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.pragma.2.cpp.err.log 
+Command         ap_eval done; error code: 1; 1.845 sec.
+ERROR: [HLS 207-2164] 'bitwidth' attribute requires integer constant between 1 and 4096 inclusive: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_common.h:512:29
+INFO: [HLS 207-4535] in instantiation of template class 'ssdm_int<0, false>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:148:29
+INFO: [HLS 207-4535] in instantiation of template class 'ap_int_base<0, false>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int.h:205:18
+INFO: [HLS 207-4535] in instantiation of template class 'ap_uint<0>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:115:17
+INFO: [HLS 207-4535] in instantiation of template class 'ap_axiu<24, 1, 0, 0>' requested here: color_convert/color_convert.cpp:23:8
+ERROR: [HLS 207-2164] 'bitwidth' attribute requires integer constant between 1 and 4096 inclusive: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int.h:232:75
+INFO: [HLS 207-4535] in instantiation of template class 'ap_uint<0>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:115:17
+INFO: [HLS 207-4535] in instantiation of template class 'ap_axiu<24, 1, 0, 0>' requested here: color_convert/color_convert.cpp:23:8
+Command       elaborate done; error code: 2; 15.377 sec.
+Command     csynth_design done; error code: 2; 15.395 sec.
+Command   ap_source done; error code: 1; 17.8 sec.
+Execute   cleanup_all 
+INFO-FLOW: Workspace D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1 opened at Tue May 07 00:01:15 +0800 2024
+Execute       ap_set_clock -name default -period 7 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 7ns.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Execute       open_platform DefaultPlatform 
+Execute       import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       set_part xc7z020-clg400-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=C:/Xilinx/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=C:/Xilinx/Vivado/2020.1/data;C:/Xilinx/Vitis/2020.1/data
+Execute         ap_part_info -name xc7z020-clg400-1 -data single -quiet 
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis/2020.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2020.1/data/parts/arch.xml
+Command         ap_part_info done; 0.936 sec.
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         ap_family_info -name zynq -data info 
+Execute         add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute           get_default_platform 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command             ap_source done; 0.111 sec.
+Command           ap_source done; 0.111 sec.
+Execute           ap_part_info -data single -name xc7z020-clg400-1 
+Execute           ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute           config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute           ap_part_info -name xc7z020-clg400-1 -data info 
+Execute           config_chip_info -speed slow 
+Command         add_library done; 0.191 sec.
+Execute         add_library xilinx/zynq/zynq_fpv6 
+Execute           get_default_platform 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                   source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                   source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         get_default_platform 
+Command       set_part done; 1.246 sec.
+Execute       ap_part_info -data single -name xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute       config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_chip_info -speed slow 
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -default_interface 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_config_rtl -register_reset_num 
+Command     open_solution done; 1.511 sec.
+Execute     set_part xc7z020clg400-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=C:/Xilinx/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=C:/Xilinx/Vivado/2020.1/data;C:/Xilinx/Vitis/2020.1/data
+Execute       ap_part_info -name xc7z020clg400-1 -data single -quiet 
+Execute       ap_part_info -name xc7z020clg400-1 -data info 
+Execute       ap_family_info -name zynq -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.107 sec.
+Command         ap_source done; 0.107 sec.
+Execute         ap_part_info -data single -name xc7z020-clg400-1 
+Execute         ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute         config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -speed slow 
+Command       add_library done; 0.175 sec.
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.28 sec.
+Execute     create_clock -period 7 
+Execute     csynth_design 
+Execute       get_config_compile -dump_cfg 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-10] Analyzing design file 'color_convert/color_convert.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling color_convert/color_convert.cpp as C++
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.cpp.diag.yml -fno-limit-debug-info --sysroot C:/Xilinx/Vitis/2020.1/tps/mingw/6.2.0/win64.o/nt -fhls -fno-exceptions -E color_convert/color_convert.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot/39 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.cpp.err.log 
+Command         ap_eval done; 1.601 sec.
+INFO-FLOW: Done: GCC PP 39 time: 1.6 seconds per iteration
+Execute         set_directive_top color_convert -name=color_convert 
+INFO-FLOW: Setting directive 'TOP' name=color_convert 
+INFO-FLOW: Setting directive 'TOP' name=color_convert 
+Execute         source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute           source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO-FLOW: Setting directive 'TOP' name=color_convert 
+Execute         list_core -type functional_unit 
+Execute         clang_tidy xilinx-systemc-detector D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  -directive=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/.systemc_flag -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 1.368 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  -directive=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/all.directive.json -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 1.781 sec.
+Execute         clang_tidy xilinx-constantarray-param,xilinx-remove-assert D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 1.454 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 3.2 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+Execute         clang_tidy -errorcheck xilinx-label-all-loops D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.574 sec.
+Execute           source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute             source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Command         clang_tidy done; 1.624 sec.
+Execute         clang_tidy -errorcheck xilinx-top-parameters D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-top-parameters -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.216 sec.
+Command         clang_tidy done; 1.253 sec.
+Execute         clang_tidy -errorcheck xilinx-array-stream-check D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-array-stream-check -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.252 sec.
+Command         clang_tidy done; 1.291 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/xilinx-dataflow-lawyer.color_convert.pp.0.cpp.diag.yml D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/xilinx-dataflow-lawyer.color_convert.pp.0.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/xilinx-dataflow-lawyer.color_convert.pp.0.cpp.err.log 
+Command         ap_eval done; 1.132 sec.
+Execute         clang_tidy -errorcheck xilinx-warn-mayneed-no-ctor-attribute D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-warn-mayneed-no-ctor-attribute -fix-errors D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.286 sec.
+Command         clang_tidy done; 1.321 sec.
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.pragma.2.cpp.diag.yml -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pragma.2.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.bc > D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.pragma.2.cpp.out.log 2> D:/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.pragma.2.cpp.err.log 
+Command         ap_eval done; error code: 1; 1.82 sec.
+ERROR: [HLS 207-2164] 'bitwidth' attribute requires integer constant between 1 and 4096 inclusive: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_common.h:512:29
+INFO: [HLS 207-4535] in instantiation of template class 'ssdm_int<0, false>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:148:29
+INFO: [HLS 207-4535] in instantiation of template class 'ap_int_base<0, false>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int.h:205:18
+INFO: [HLS 207-4535] in instantiation of template class 'ap_uint<0>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:115:17
+INFO: [HLS 207-4535] in instantiation of template class 'ap_axiu<24, 1, 0, 0>' requested here: color_convert/color_convert.cpp:23:8
+ERROR: [HLS 207-2164] 'bitwidth' attribute requires integer constant between 1 and 4096 inclusive: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int.h:232:75
+INFO: [HLS 207-4535] in instantiation of template class 'ap_uint<0>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:115:17
+INFO: [HLS 207-4535] in instantiation of template class 'ap_axiu<24, 1, 0, 0>' requested here: color_convert/color_convert.cpp:23:8
+Command       elaborate done; error code: 2; 15.104 sec.
+Command     csynth_design done; error code: 2; 15.118 sec.
+Command   ap_source done; error code: 1; 17.048 sec.
+Execute   cleanup_all 
+INFO-FLOW: Workspace C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1 opened at Tue May 07 00:10:07 +0800 2024
+Execute       ap_set_clock -name default -period 7 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 7ns.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Execute       open_platform DefaultPlatform 
+Execute       import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       set_part xc7z020-clg400-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=C:/Xilinx/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=C:/Xilinx/Vivado/2020.1/data;C:/Xilinx/Vitis/2020.1/data
+Execute         ap_part_info -name xc7z020-clg400-1 -data single -quiet 
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis/2020.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2020.1/data/parts/arch.xml
+Command         ap_part_info done; 0.87 sec.
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         ap_family_info -name zynq -data info 
+Execute         add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute           get_default_platform 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command             ap_source done; 0.104 sec.
+Command           ap_source done; 0.105 sec.
+Execute           ap_part_info -data single -name xc7z020-clg400-1 
+Execute           ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute           config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute           ap_part_info -name xc7z020-clg400-1 -data info 
+Execute           config_chip_info -speed slow 
+Command         add_library done; 0.457 sec.
+Execute         add_library xilinx/zynq/zynq_fpv6 
+Execute           get_default_platform 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                   source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                   source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Command         add_library done; 0.202 sec.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         get_default_platform 
+Command       set_part done; 1.802 sec.
+Execute       ap_part_info -data single -name xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute       config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_chip_info -speed slow 
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -default_interface 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_config_rtl -register_reset_num 
+Command     open_solution done; 2.978 sec.
+Execute     set_part xc7z020clg400-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=C:/Xilinx/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=C:/Xilinx/Vivado/2020.1/data;C:/Xilinx/Vitis/2020.1/data
+Execute       ap_part_info -name xc7z020clg400-1 -data single -quiet 
+Execute       ap_part_info -name xc7z020clg400-1 -data info 
+Execute       ap_family_info -name zynq -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Execute         ap_part_info -data single -name xc7z020-clg400-1 
+Execute         ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute         config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -speed slow 
+Command       add_library done; 0.59 sec.
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Command       add_library done; 0.246 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 1.162 sec.
+Execute     create_clock -period 7 
+Command     create_clock done; 0.254 sec.
+Execute     csynth_design 
+Execute       get_config_compile -dump_cfg 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-10] Analyzing design file 'color_convert/color_convert.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling color_convert/color_convert.cpp as C++
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.cpp.diag.yml -fno-limit-debug-info --sysroot C:/Xilinx/Vitis/2020.1/tps/mingw/6.2.0/win64.o/nt -fhls -fno-exceptions -E color_convert/color_convert.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot/39 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.cpp.err.log 
+Command         ap_eval done; 1.584 sec.
+INFO-FLOW: Done: GCC PP 39 time: 1.6 seconds per iteration
+Execute         set_directive_top color_convert -name=color_convert 
+INFO-FLOW: Setting directive 'TOP' name=color_convert 
+Command         set_directive_top done; 0.271 sec.
+INFO-FLOW: Setting directive 'TOP' name=color_convert 
+Execute         source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute           source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO-FLOW: Setting directive 'TOP' name=color_convert 
+Execute         list_core -type functional_unit 
+Execute         clang_tidy xilinx-systemc-detector C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/.systemc_flag -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 1.477 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/all.directive.json -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 1.703 sec.
+Execute         clang_tidy xilinx-constantarray-param,xilinx-remove-assert C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 1.551 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 3.3 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+Execute         clang_tidy -errorcheck xilinx-label-all-loops C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.801 sec.
+Execute           source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute             source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Command         clang_tidy done; 1.901 sec.
+Execute         clang_tidy -errorcheck xilinx-top-parameters C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-top-parameters -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.31 sec.
+Command         clang_tidy done; 1.368 sec.
+Execute         clang_tidy -errorcheck xilinx-array-stream-check C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-array-stream-check -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.262 sec.
+Command         clang_tidy done; 1.296 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/xilinx-dataflow-lawyer.color_convert.pp.0.cpp.diag.yml C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/xilinx-dataflow-lawyer.color_convert.pp.0.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/xilinx-dataflow-lawyer.color_convert.pp.0.cpp.err.log 
+Command         ap_eval done; 1.362 sec.
+Execute         clang_tidy -errorcheck xilinx-warn-mayneed-no-ctor-attribute C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.357 sec.
+Command         clang_tidy done; 1.393 sec.
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.pragma.2.cpp.diag.yml -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pragma.2.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.bc > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.pragma.2.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.pragma.2.cpp.err.log 
+Command         ap_eval done; error code: 1; 1.983 sec.
+ERROR: [HLS 207-2164] 'bitwidth' attribute requires integer constant between 1 and 4096 inclusive: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_common.h:512:29
+INFO: [HLS 207-4535] in instantiation of template class 'ssdm_int<0, false>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:148:29
+INFO: [HLS 207-4535] in instantiation of template class 'ap_int_base<0, false>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int.h:205:18
+INFO: [HLS 207-4535] in instantiation of template class 'ap_uint<0>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:115:17
+INFO: [HLS 207-4535] in instantiation of template class 'ap_axiu<24, 1, 0, 0>' requested here: color_convert/color_convert.cpp:23:8
+ERROR: [HLS 207-2164] 'bitwidth' attribute requires integer constant between 1 and 4096 inclusive: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int.h:232:75
+INFO: [HLS 207-4535] in instantiation of template class 'ap_uint<0>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:115:17
+INFO: [HLS 207-4535] in instantiation of template class 'ap_axiu<24, 1, 0, 0>' requested here: color_convert/color_convert.cpp:23:8
+Command       elaborate done; error code: 2; 20.158 sec.
+Command     csynth_design done; error code: 2; 20.172 sec.
+Command   ap_source done; error code: 1; 26.041 sec.
+Execute   cleanup_all 
+INFO-FLOW: Workspace C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1 opened at Tue May 07 00:14:55 +0800 2024
+Execute       ap_set_clock -name default -period 7 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 7ns.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.104 sec.
+Command       ap_source done; 0.104 sec.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       set_part xc7z020-clg400-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=C:/Xilinx/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=C:/Xilinx/Vivado/2020.1/data;C:/Xilinx/Vitis/2020.1/data
+Execute         ap_part_info -name xc7z020-clg400-1 -data single -quiet 
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis/2020.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2020.1/data/parts/arch.xml
+Command         ap_part_info done; 0.892 sec.
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         ap_family_info -name zynq -data info 
+Execute         add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute           get_default_platform 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.101 sec.
+Execute           ap_part_info -data single -name xc7z020-clg400-1 
+Execute           ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute           config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute           ap_part_info -name xc7z020-clg400-1 -data info 
+Execute           config_chip_info -speed slow 
+Command         add_library done; 0.538 sec.
+Execute         add_library xilinx/zynq/zynq_fpv6 
+Execute           get_default_platform 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                   source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                   source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Command         add_library done; 0.184 sec.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         get_default_platform 
+Command       set_part done; 1.902 sec.
+Execute       ap_part_info -data single -name xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute       config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_chip_info -speed slow 
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -default_interface 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_config_rtl -register_reset_num 
+Command     open_solution done; 3.107 sec.
+Execute     set_part xc7z020clg400-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=C:/Xilinx/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=C:/Xilinx/Vivado/2020.1/data;C:/Xilinx/Vitis/2020.1/data
+Execute       ap_part_info -name xc7z020clg400-1 -data single -quiet 
+Execute       ap_part_info -name xc7z020clg400-1 -data info 
+Execute       ap_family_info -name zynq -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Execute         ap_part_info -data single -name xc7z020-clg400-1 
+Execute         ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute         config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -speed slow 
+Command       add_library done; 0.581 sec.
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Command       add_library done; 0.236 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 1.125 sec.
+Execute     create_clock -period 7 
+Command     create_clock done; 0.232 sec.
+Execute     csynth_design 
+Execute       get_config_compile -dump_cfg 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-10] Analyzing design file 'color_convert/color_convert.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling color_convert/color_convert.cpp as C++
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.cpp.diag.yml -fno-limit-debug-info --sysroot C:/Xilinx/Vitis/2020.1/tps/mingw/6.2.0/win64.o/nt -fhls -fno-exceptions -E color_convert/color_convert.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot/39 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.cpp.err.log 
+Command         ap_eval done; 1.488 sec.
+INFO-FLOW: Done: GCC PP 39 time: 1.5 seconds per iteration
+Execute         set_directive_top color_convert -name=color_convert 
+INFO-FLOW: Setting directive 'TOP' name=color_convert 
+Command         set_directive_top done; 0.312 sec.
+INFO-FLOW: Setting directive 'TOP' name=color_convert 
+Execute         source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute           source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO-FLOW: Setting directive 'TOP' name=color_convert 
+Execute         list_core -type functional_unit 
+Execute         clang_tidy xilinx-systemc-detector C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/.systemc_flag -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 1.409 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/all.directive.json -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 1.637 sec.
+Execute         clang_tidy xilinx-constantarray-param,xilinx-remove-assert C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 1.538 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 3.2 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+Execute         clang_tidy -errorcheck xilinx-label-all-loops C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.638 sec.
+Execute           source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute             source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Command         clang_tidy done; 1.688 sec.
+Execute         clang_tidy -errorcheck xilinx-top-parameters C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-top-parameters -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.33 sec.
+Command         clang_tidy done; 1.371 sec.
+Execute         clang_tidy -errorcheck xilinx-array-stream-check C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-array-stream-check -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.226 sec.
+Command         clang_tidy done; 1.26 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/xilinx-dataflow-lawyer.color_convert.pp.0.cpp.diag.yml C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/xilinx-dataflow-lawyer.color_convert.pp.0.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/xilinx-dataflow-lawyer.color_convert.pp.0.cpp.err.log 
+Command         ap_eval done; 1.17 sec.
+Execute         clang_tidy -errorcheck xilinx-warn-mayneed-no-ctor-attribute C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.328 sec.
+Command         clang_tidy done; 1.362 sec.
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.pragma.2.cpp.diag.yml -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pragma.2.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.bc > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.pragma.2.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.pragma.2.cpp.err.log 
+Command         ap_eval done; error code: 1; 2.079 sec.
+ERROR: [HLS 207-2164] 'bitwidth' attribute requires integer constant between 1 and 4096 inclusive: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_common.h:512:29
+INFO: [HLS 207-4535] in instantiation of template class 'ssdm_int<0, false>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:148:29
+INFO: [HLS 207-4535] in instantiation of template class 'ap_int_base<0, false>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int.h:205:18
+INFO: [HLS 207-4535] in instantiation of template class 'ap_uint<0>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:115:17
+INFO: [HLS 207-4535] in instantiation of template class 'ap_axiu<24, 1, 0, 0>' requested here: color_convert/color_convert.cpp:23:8
+ERROR: [HLS 207-2164] 'bitwidth' attribute requires integer constant between 1 and 4096 inclusive: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int.h:232:75
+INFO: [HLS 207-4535] in instantiation of template class 'ap_uint<0>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:115:17
+INFO: [HLS 207-4535] in instantiation of template class 'ap_axiu<24, 1, 0, 0>' requested here: color_convert/color_convert.cpp:23:8
+Command       elaborate done; error code: 2; 19.724 sec.
+Command     csynth_design done; error code: 2; 19.741 sec.
+Command   ap_source done; error code: 1; 25.693 sec.
+Execute   cleanup_all 
+INFO-FLOW: Workspace C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1 opened at Tue May 07 00:18:17 +0800 2024
+Execute       ap_set_clock -name default -period 7 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 7ns.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Command       import_lib done; 0.179 sec.
+Execute       source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.309 sec.
+Command       ap_source done; 0.32 sec.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       set_part xc7z020-clg400-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=C:/Xilinx/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=C:/Xilinx/Vivado/2020.1/data;C:/Xilinx/Vitis/2020.1/data
+Execute         ap_part_info -name xc7z020-clg400-1 -data single -quiet 
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis/2020.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2020.1/data/parts/arch.xml
+Command         ap_part_info done; 2.269 sec.
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         ap_family_info -name zynq -data info 
+Execute         add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute           get_default_platform 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Execute           ap_part_info -data single -name xc7z020-clg400-1 
+Execute           ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute           config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute           ap_part_info -name xc7z020-clg400-1 -data info 
+Execute           config_chip_info -speed slow 
+Command         add_library done; 0.486 sec.
+Execute         add_library xilinx/zynq/zynq_fpv6 
+Execute           get_default_platform 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                   source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                   source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Command         add_library done; 0.181 sec.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         get_default_platform 
+Command       set_part done; 3.268 sec.
+Execute       ap_part_info -data single -name xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute       config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_chip_info -speed slow 
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -default_interface 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_config_rtl -register_reset_num 
+Command     open_solution done; 4.92 sec.
+Execute     set_part xc7z020clg400-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=C:/Xilinx/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=C:/Xilinx/Vivado/2020.1/data;C:/Xilinx/Vitis/2020.1/data
+Execute       ap_part_info -name xc7z020clg400-1 -data single -quiet 
+Execute       ap_part_info -name xc7z020clg400-1 -data info 
+Execute       ap_family_info -name zynq -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Execute         ap_part_info -data single -name xc7z020-clg400-1 
+Execute         ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute         config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -speed slow 
+Command       add_library done; 0.582 sec.
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source C:/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Command       add_library done; 0.245 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 1.141 sec.
+Execute     create_clock -period 7 
+Command     create_clock done; 0.236 sec.
+Execute     csynth_design 
+Execute       get_config_compile -dump_cfg 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-10] Analyzing design file 'color_convert/color_convert.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling color_convert/color_convert.cpp as C++
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.cpp.diag.yml -fno-limit-debug-info --sysroot C:/Xilinx/Vitis/2020.1/tps/mingw/6.2.0/win64.o/nt -fhls -fno-exceptions -E color_convert/color_convert.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot/39 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.cpp.err.log 
+Command         ap_eval done; 2.052 sec.
+INFO-FLOW: Done: GCC PP 39 time: 2.1 seconds per iteration
+Execute         set_directive_top color_convert -name=color_convert 
+INFO-FLOW: Setting directive 'TOP' name=color_convert 
+Command         set_directive_top done; 0.287 sec.
+INFO-FLOW: Setting directive 'TOP' name=color_convert 
+Execute         source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute           source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO-FLOW: Setting directive 'TOP' name=color_convert 
+Execute         list_core -type functional_unit 
+Execute         clang_tidy xilinx-systemc-detector C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/.systemc_flag -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 1.477 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/all.directive.json -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 1.788 sec.
+Execute         clang_tidy xilinx-constantarray-param,xilinx-remove-assert C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 1.72 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 3.5 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+Execute         clang_tidy -errorcheck xilinx-label-all-loops C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.648 sec.
+Execute           source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute             source C:/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Command         clang_tidy done; 1.768 sec.
+Execute         clang_tidy -errorcheck xilinx-top-parameters C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-top-parameters -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.393 sec.
+Command         clang_tidy done; 1.461 sec.
+Execute         clang_tidy -errorcheck xilinx-array-stream-check C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-array-stream-check -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.274 sec.
+Command         clang_tidy done; 1.311 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/xilinx-dataflow-lawyer.color_convert.pp.0.cpp.diag.yml C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/xilinx-dataflow-lawyer.color_convert.pp.0.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/xilinx-dataflow-lawyer.color_convert.pp.0.cpp.err.log 
+Command         ap_eval done; 1.303 sec.
+Execute         clang_tidy -errorcheck xilinx-warn-mayneed-no-ctor-attribute C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang-tidy.color_convert.pp.0.cpp.err.log 
+Command           ap_eval done; 1.336 sec.
+Command         clang_tidy done; 1.378 sec.
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.pragma.2.cpp.diag.yml -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.pragma.2.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot -I C:/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/color_convert.bc > C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.pragma.2.cpp.out.log 2> C:/Users/timta/Desktop/PYNQ-master/PYNQ-master/boards/ip/hls/color_convert/solution1/.autopilot/db/clang.color_convert.pragma.2.cpp.err.log 
+Command         ap_eval done; error code: 1; 2.165 sec.
+ERROR: [HLS 207-2164] 'bitwidth' attribute requires integer constant between 1 and 4096 inclusive: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_common.h:512:29
+INFO: [HLS 207-4535] in instantiation of template class 'ssdm_int<0, false>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:148:29
+INFO: [HLS 207-4535] in instantiation of template class 'ap_int_base<0, false>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int.h:205:18
+INFO: [HLS 207-4535] in instantiation of template class 'ap_uint<0>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:115:17
+INFO: [HLS 207-4535] in instantiation of template class 'ap_axiu<24, 1, 0, 0>' requested here: color_convert/color_convert.cpp:23:8
+ERROR: [HLS 207-2164] 'bitwidth' attribute requires integer constant between 1 and 4096 inclusive: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_int.h:232:75
+INFO: [HLS 207-4535] in instantiation of template class 'ap_uint<0>' requested here: C:/Xilinx/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:115:17
+INFO: [HLS 207-4535] in instantiation of template class 'ap_axiu<24, 1, 0, 0>' requested here: color_convert/color_convert.cpp:23:8
+Command       elaborate done; error code: 2; 20.953 sec.
+Command     csynth_design done; error code: 2; 20.974 sec.
+Command   ap_source done; error code: 1; 28.746 sec.
+Execute   cleanup_all 
